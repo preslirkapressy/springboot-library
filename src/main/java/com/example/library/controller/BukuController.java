@@ -31,17 +31,17 @@ public class BukuController {
     }
 
     @GetMapping("/id/{bukuId}")
-    public Buku getBukuById (@PathVariable(name = "bukuId") Long bukuId) {
+    public Buku getBukuById(@PathVariable(name = "bukuId") Long bukuId) {
         return bukuService.getBukuById(bukuId);
     }
 
     @GetMapping("/judul/{judul}")
-    public List<Buku> getBukuByJudul (@PathVariable(name = "judul") String judul) {
+    public List<Buku> getBukuByJudul(@PathVariable(name = "judul") String judul) {
         return bukuService.getBukuByJudul(judul);
     }
     
     @GetMapping("/penerbit/{penerbit}")
-    public List<Buku> getBukuByPenerbit (@PathVariable(name = "penerbit") String penerbit) {
+    public List<Buku> getBukuByPenerbit(@PathVariable(name = "penerbit") String penerbit) {
         return bukuService.getBukuByPenerbit(penerbit);
     }
 
