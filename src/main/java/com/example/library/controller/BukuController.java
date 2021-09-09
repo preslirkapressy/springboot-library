@@ -55,8 +55,8 @@ public class BukuController {
         bukuService.deleteBuku(bukuId);
     }
 
-    @PutMapping("/id/{bukuId}")
-    public void updateBuku(@PathVariable(name = "bukuId") Long bukuId, @RequestBody Buku buku) {
-        bukuService.updateBuku(bukuId, buku);
+    @PutMapping("")
+    public void updateBuku(@RequestBody Buku buku) {
+        bukuService.updateBuku(buku);
     }
 }

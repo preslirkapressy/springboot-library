@@ -60,8 +60,8 @@ public class PelangganService {
         throw new ResponseStatusException(HttpStatus.OK, "Pelanggan was successfully removed!");
     }
 
-    public void updatePelanggan(Long pelangganId, Pelanggan pelanggan) {
-        Optional<Pelanggan> tempPelanggan = pelangganRepository.findById(pelangganId);
+    public void updatePelanggan(Pelanggan pelanggan) {
+        Optional<Pelanggan> tempPelanggan = pelangganRepository.findById(pelanggan.getID());
 
         if (tempPelanggan.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No matching pelanggan was found!");

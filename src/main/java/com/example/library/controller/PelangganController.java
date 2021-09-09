@@ -51,9 +51,9 @@ public class PelangganController {
         pelangganService.deletePelanggan(pelangganId);
     }
 
-    @PutMapping("/id/{pelangganId}")
-    public void updatepelanggan(@PathVariable(name = "pelangganId") Long pelangganId, @RequestBody Pelanggan pelanggan) {
-        pelangganService.updatePelanggan(pelangganId, pelanggan);
+    @PutMapping("")
+    public void updatepelanggan(@RequestBody Pelanggan pelanggan) {
+        pelangganService.updatePelanggan(pelanggan);
     }
     
         

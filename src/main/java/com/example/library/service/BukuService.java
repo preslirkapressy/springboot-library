@@ -91,8 +91,8 @@ public class BukuService {
     }
 
 
-    public void updateBuku(Long bukuId, Buku buku) {
-        Optional<Buku> tempBuku = bukuRepository.findById(bukuId);
+    public void updateBuku(Buku buku) {
+        Optional<Buku> tempBuku = bukuRepository.findById(buku.getID());
 
 
         if (tempBuku.isEmpty()) {
